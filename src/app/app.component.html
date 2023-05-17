@@ -1,0 +1,13 @@
+<header>
+	<label class="logo">GYM-PAGE</label>
+	<nav>
+		<ul class="nav_links">
+			<li [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/home">HOME</a></li>
+			<li [routerLinkActive]="'active'"><a routerLink="/records">RECORDS</a></li>
+			<li [routerLinkActive]="'active'"><a routerLink="/routines">ROUTINES</a></li>
+			<li [routerLinkActive]="'active'"><a routerLink="/workouts">WORKOUTS</a></li>
+		</ul>
+	</nav>
+    <a href="#login"><button>LOGOUT</button></a>
+</header>
+<router-outlet></router-outlet>
