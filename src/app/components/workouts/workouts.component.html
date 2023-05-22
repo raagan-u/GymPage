@@ -3,7 +3,7 @@
 		<input type="date" name="date" id="date" formControlName="date">
 	</div> <br> <br>
 	<div class="input-field">
-		<input type="text" name="name" id="name" formControlName="name">
+		<input type="text" name="name" id="name" formControlName="name" placeholder="Enter Exercise Name">
 	</div> <br> <br>
 	<div *ngFor="let control of  setsFieldFormArray.controls ;let i = index;" formArrayName='sets' >
         <div [formGroupName]="i" >
