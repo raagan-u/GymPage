@@ -9,6 +9,7 @@ import { RecordsComponent } from './components/records/records.component';
 import { WorkoutsComponent } from './components/workouts/workouts.component';
 import { RoutinesComponent } from './components/routines/routines.component';
 import { ProgbarComponent } from './components/progbar/progbar.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ProgbarComponent } from './components/progbar/progbar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     NgCircleProgressModule.forRoot({
       "radius": 75,
       "space": -10,

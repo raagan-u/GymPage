@@ -49,5 +49,4 @@ button:hover {
 .nav_links li a:hover {
 	background-color: rgb(255, 255, 255);
 	box-shadow: 0 5px 10px 0 #fff;
-	padding: 10px 20px;
 }

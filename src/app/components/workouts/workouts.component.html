@@ -1,12 +1,25 @@
-<form>
-	<div>
-		<label>CURRENT SPLIT: PPL/ARNOLD</label>
-	</div>
-	<div>
-		<button>ADD</button>
-	</div>
-	<div>
-	<label>WORKOUT</label><input type="dropdown">
-	</div>
-	<label>EXERCISES</label>
+<form [formGroup]="form">
+	<div class="input-field">
+		<input type="date" name="date" id="date" formControlName="date">
+	</div> <br> <br>
+	<div class="input-field">
+		<input type="text" name="name" id="name" formControlName="name">
+	</div> <br> <br>
+	<div *ngFor="let control of  setsFieldFormArray.controls ;let i = index;" formArrayName='sets' >
+        <div [formGroupName]="i" >
+            <div  class="input-field" >
+            <input type="text"
+                placeholder="Reps" formControlName="reps" >
+            </div>
+			<div  class="input-field" >
+			<input type="text"
+				placeholder="Weight (kgs)" formControlName="weights" >
+			</div>
+            <button class="button" type="button" (click)="remove(i)" >Remove</button>
+        </div> <br> <br>
+    </div> <br> <br>
+    <button  class="button" (click)="addControl()" > Add New Set</button> <br> <br>
+  <button class="button" type="submit" (click)="addWorkout()" [disabled]="form.invalid">
+    submit
+  </button>
 </form>
