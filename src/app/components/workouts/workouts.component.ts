@@ -36,6 +36,6 @@ export class WorkoutsComponent {
   }
 
   addWorkout() {
-    console.log(this.form.value);
+    console.log(JSON.stringify(this.form.getRawValue()));
   }
 }
